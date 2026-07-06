@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -X utf8 -c ' *)",
+      "Bash(python -X utf8 src/01_build_master.py)",
+      "Bash(python -X utf8 src/02_build_crosswalk.py)",
+      "Bash(python -X utf8 src/03_resolve.py)",
+      "Bash(python -X utf8 src/04_interactions.py)",
+      "Bash(python src/test_openfda.py)",
+      "Bash(python src/05_openfda_ddi.py)",
+      "Bash(pip install *)",
+      "Bash(streamlit run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8501/healthz)",
+      "Bash(nohup python -m streamlit run app.py --server.headless true --server.port 8501)",
+      "Bash(echo \"PID: $!\")"
+    ]
+  }
+}
